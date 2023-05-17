@@ -15,3 +15,6 @@ You now have an OAuth 2.0 and OpenID-Connect compliant identity provider that ca
 In their own words, [Leptos](https://github.com/leptos-rs/leptos) is a full-stack, isomorphic Rust web framework leveraging fine-grained reactivity to build declarative user interfaces.  
 Leptos combines the power of reactive lightweight Javascript frontend frameworks like SolidJS with the correctness imposed by Rust's borrow checker.  
 One of Leptos' many powerful features is that it allows you to write colocated frontend and backend code, which Lepto's "server" macro separates into backend and frontend applications along with any additional boilerplate code necessary to communicate and exchange data between the frontend and backend. You can now focus on implementing your business logic while the "server" macro handles the tedious yet necessary boilerplate code.
+
+## Demo OAuth2 Client
+The project includes a demo OAuth2 client for testing purposes only. You may use it to verify that the server logic is working as expected. The client does the bare minimum to help verify the server and was included so you wouldn't need to create a separate application for it.
