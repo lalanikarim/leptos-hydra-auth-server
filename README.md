@@ -7,6 +7,7 @@ To build your authentication server, you first create a web application that can
 1. Render UI to collect login credentials and any necessary consent from the users
 2. Verify the provided credentials against your user database
 3. Communicate with Hydra's admin API on the success or failure of verification  
+
 Once your web application is built and deployed, you update Hydra's configuration and provide the login and consent UI endpoints for your web application. Hydra takes care of the rest.  
 You now have an OAuth 2.0 and OpenID-Connect compliant identity provider that can authenticate users and issue access tokens, refresh tokens, and ID tokens to your users, not only for your internal applications but also for external third-party applications, should they choose to, or with those applications that allow you to bring your own OAuth 2.0 authentication providers.
 
