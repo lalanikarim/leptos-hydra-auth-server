@@ -18,13 +18,19 @@ One of Leptos' many powerful features is that it allows you to write colocated f
 
 ## Setup
 In order to test this integration, you'll need to:
-1. create and run `hydra` container using the provided sample `docker-compose.yml`
+1. Copy the provided `.env.example` to `.env` file.
+2. create and run `hydra` container using the provided sample `docker-compose.yml`
 ```
 docker-compose up -d
 ```
-2. create an `oauth2-client` using the following command against the `hydra` container
+3. create an `oauth2-client` using the following command against the `hydra` container
 ```
 docker-compose exec hydra hydra create client --endpoint=http://localhost:4445 --token-endpoint-auth-method client_secret_post --redirect-uri http://127.0.0.1:3000
+```
+4. Copy the generated `CLIENT ID` and `CLIENT SECRET` values and paste them in `.env` for `OAUTH2_CLIENT_ID` and `OAUTH2_CLIENT_SECRET`. Don't forget to uncomment those variables.
+5. compile and run the project
+```
+cargo leptos watch
 ```
 
 ## Demo OAuth2 Client
