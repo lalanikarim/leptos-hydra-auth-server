@@ -32,6 +32,7 @@ docker-compose exec hydra hydra create client --endpoint=http://localhost:4445 -
 ```
 cargo leptos watch
 ```
+6. Visit `http://127.0.0.1:3000` in your browser to test the sample integration.
 
 ## Demo OAuth2 Client
 The project includes a demo OAuth2 client for testing purposes only. You may use it to verify that the server logic is working as expected. The client does the bare minimum to help verify the server and was included so you wouldn't need to create a separate application for it.
