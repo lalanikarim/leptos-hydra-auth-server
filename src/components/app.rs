@@ -1,7 +1,8 @@
-use crate::{consent::Consent, demo::Demo, login::*};
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
+
+use crate::components::{consent::Consent, demo_client::demo_app::DemoApp, login::Login};
 
 #[component]
 pub fn App(cx: Scope) -> impl IntoView {
@@ -23,7 +24,7 @@ pub fn App(cx: Scope) -> impl IntoView {
             <main>
                 <Routes>
                     <Route path="/" view=|cx| view! { cx, <HomePage/> }>
-                        <Route path="" view=|cx| view! { cx, <Demo /> }/>
+                        <Route path="" view=|cx| view! { cx, <DemoApp /> }/>
                         <Route path="login" view=|cx| view! { cx, <Login/> }/>
                         <Route path="consent" view=|cx| view! { cx, <Consent/> }/>
                     </Route>

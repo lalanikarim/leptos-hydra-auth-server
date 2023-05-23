@@ -1,20 +1,14 @@
 use cfg_if::cfg_if;
-pub mod app;
-pub mod auth_flow;
-pub mod consent;
-pub mod demo;
-pub mod error_response;
+pub mod components;
 pub mod error_template;
 pub mod fileserv;
-pub mod login;
-pub mod token_flow;
 
 #[macro_use]
 extern crate dotenv_codegen;
 cfg_if! { if #[cfg(feature = "hydrate")] {
     use leptos::*;
     use wasm_bindgen::prelude::wasm_bindgen;
-    use crate::app::*;
+    use crate::components::app::*;
 
     #[wasm_bindgen]
     pub fn hydrate() {

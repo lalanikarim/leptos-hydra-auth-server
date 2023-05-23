@@ -1,9 +1,11 @@
+use crate::components::{
+    demo_client::{auth_flow::AuthFlow, token_flow::TokenFlow},
+    error_response::ErrorResponse,
+};
 use leptos::*;
 
-use crate::{auth_flow::AuthFlow, error_response::ErrorResponse, token_flow::TokenFlow};
-
 #[component]
-pub fn Demo(cx: Scope) -> impl IntoView {
+pub fn DemoApp(cx: Scope) -> impl IntoView {
     let client_id = dotenv!("CLIENT_ID");
     let response_type = dotenv!("RESPONSE_TYPE");
     let scope = dotenv!("SCOPE");
